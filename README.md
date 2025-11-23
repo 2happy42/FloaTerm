@@ -21,7 +21,7 @@ To install and configure FloaTerm using **lazy.nvim**, add the following to your
 
 ```lua
 {
-  "2happy42/FloaTerm",  -- GitHub repository path for the plugin
+  "2happy42/floa-term.nvim",  -- GitHub repository path for the plugin
   version = "*",  -- Use the latest stable version
   event = "VeryLazy",  -- Define when the plugin should be loaded (e.g., on Neovim startup or on demand)
   keys = {

@@ -59,6 +59,31 @@ To install and configure FloaTerm using **lazy.nvim**, add the following to your
   end,
 }
 ```
+
+Or in a more minimal config:
+```lua
+{
+  "2happy42/floa-term.nvim",
+  keys = {
+    { "<leader>ft", "<cmd>FloatingTerminal<cr>", desc = "Toggle the floating terminal" },
+  },
+  opts = {
+    width = 0.8,
+    height = 0.8,
+    row = 0.1,
+    col = 0.1,
+    border = "rounded",
+  },
+  config = function(_, opts)
+    vim.g.floating_terminal_width = opts.width
+    vim.g.floating_terminal_height = opts.height
+    vim.g.floating_terminal_border = opts.border
+    vim.g.floating_terminal_row = opts.row
+    vim.g.floating_terminal_col = opts.col
+    require("floa-term.floating_terminal")
+  end,
+}
+```
 ---
 
 ## Example Usage
